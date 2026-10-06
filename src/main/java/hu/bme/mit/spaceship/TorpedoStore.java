@@ -39,10 +39,10 @@ public class TorpedoStore {
 
     // simulate random overheating of the launcher bay which prevents firing
     double r = generator.nextDouble();
-
+    
     if (r >= FAILURE_RATE) {
       // successful firing
-      this.torpedoCount -= numberOfTorpedos;
+      this.torpedoCount -= numberOfTorpedos; // update remaining torpedo count
       success = true;
     } else {
       // simulated failure
